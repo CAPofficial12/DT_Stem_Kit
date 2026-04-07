@@ -14,5 +14,10 @@ int main()
     int value2 (100.7);
     std::cout << value2 << std::endl;
 
+    std::string name;
+    std::cin >> name;
+
+    std::cout << name << std::endl;
+
     return 0;
 }
