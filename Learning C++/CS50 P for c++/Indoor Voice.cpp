@@ -4,10 +4,15 @@
 int main(){
 
     std::string message;
+    std::string new_message;
+
     getline(std::cin , message);
 
-    message = std::tolower(message);
+    for (char i: message){
+        char a = std::tolower((unsigned char)i);
+        new_message = new_message + a;
+    }
 
-
+    std::cout << new_message;
     return 0;
 }
