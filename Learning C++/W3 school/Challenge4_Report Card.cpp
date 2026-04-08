@@ -14,5 +14,6 @@ int main (){
     std::cout << score << "\n";
     std::cout << grade;
 
+    std::cin.get();
     return 0;
 }

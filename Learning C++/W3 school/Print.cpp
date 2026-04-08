@@ -19,5 +19,6 @@ int main()
 
     std::cout << name << std::endl;
 
+    std::cin.get();
     return 0;
 }

@@ -12,6 +12,7 @@ int main(){
     area = {length * width};
 
     std::cout << area << "\n";
+    std::cin.get();
 
     return 0;
 }

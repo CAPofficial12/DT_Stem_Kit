@@ -12,5 +12,7 @@ int main(){
     sum = itemPrice + shippingCost;
 
     std::cout << sum << "\n";
+    std::cin.get();
+    
     return 0;
 }

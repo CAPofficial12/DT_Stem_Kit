@@ -8,5 +8,7 @@ int main(){
     minAge = 50;
 
     std::cout << (age >= minAge);
+    std::cin.get();
 
+    return 0;
 }

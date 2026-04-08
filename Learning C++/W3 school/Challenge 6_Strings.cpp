@@ -5,5 +5,7 @@ int main(){
     message = "Hello";
     
     std::cout << message;
+    std::cin.get();
+    
     return 0;
 }

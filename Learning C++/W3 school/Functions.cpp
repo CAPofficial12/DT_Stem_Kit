@@ -15,5 +15,6 @@ int main()  // Main must always return an integer
 
     int interger {GetValueFromUser()};
     std::cout << "The number " << interger << " doubled is " << interger * 2 << "\n";
+    std::cin.get();
     return 0;
 }
