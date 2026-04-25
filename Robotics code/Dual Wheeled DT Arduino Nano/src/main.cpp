@@ -1,18 +1,43 @@
 #include <Arduino.h>
+#include <Servo.h>
+#include <MPU6050.h>
+#include <Wire.h>
 
-// put function declarations here:
-int myFunction(int, int);
+// All 4 servos
+Servo servoTL;
+Servo servoTR;
+Servo servoBL;
+Servo servoBR;
+
+MPU6050 imu;
+
+int t1;
+int t2;
+
+int target;
+int tilt;
+
+void fix_pos(int x){}
 
 void setup() {
-  // put your setup code here, to run once:
-  int result = myFunction(2, 3);
+
+  imu.CalibrateAccel();
+  imu.CalibrateGyro();
+
+  servoTL.attach(0);
+  servoTR.attach(1);
+  servoBL.attach(2);
+  servoBR.attach(3);
 }
 
 void loop() {
-  // put your main code here, to run repeatedly:
+  t1 = millis();
+  fix_pos(90);
 }
 
-// put function definitions here:
-int myFunction(int x, int y) {
-  return x + y;
+void fix_pos(int x) {
+  servoTL.write(x);
+  servoTR.write(x);
+  servoBL.write(x);
+  servoBR.write(x);
 }
